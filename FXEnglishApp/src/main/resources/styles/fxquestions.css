@@ -1,0 +1,19 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+VBox {
+    -fx-padding: 10;
+}
+
+Text.Subject {
+    -fx-font-size: 30;
+    -fx-font-weight: bold;
+    -fx-fill: red;
+    -fx-stroke-width: 3;
+    -fx-stroke: gold;
+}
+
+VBox, HBox {
+    -fx-spacing: 5;
+}

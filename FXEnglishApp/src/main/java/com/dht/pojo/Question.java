@@ -24,9 +24,14 @@ public class Question {
         this.content = content;
         this.categoryId = categoryId;
     }
-    
-    
 
+    @Override
+    public String toString() {
+        return this.id; // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+    }
+    
+     
+    
     /**
      * @return the id
      */

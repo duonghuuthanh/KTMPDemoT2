@@ -20,14 +20,15 @@ public class TestQuestionServices {
     
     @Test
     public void testCategoryIsNotNull() throws SQLException {
-        List<Question> questions = s.getQuestions(2);
+        List<Question> questions = s.getQuestions(2, null);
+        
         for (var q: questions)
             Assertions.assertTrue(q.getCategoryId() > 0);
     }
     
     @Test
     public void testChoices() throws SQLException {
-        List<Question> questions = s.getQuestions(5);
+        List<Question> questions = s.getQuestions(5, null);
         for (var q: questions) {
             q.setChoices(s.getChoices(q.getId()));
             Assertions.assertTrue(q.getChoices().size() == 4);

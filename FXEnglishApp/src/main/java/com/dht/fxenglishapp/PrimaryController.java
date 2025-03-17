@@ -2,7 +2,6 @@ package com.dht.fxenglishapp;
 
 import com.dht.pojo.Question;
 import com.dht.services.QuestionServices;
-import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.List;
@@ -12,8 +11,6 @@ import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
 import javafx.scene.control.RadioButton;
 import javafx.scene.text.Text;
 
@@ -57,7 +54,7 @@ public class PrimaryController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         QuestionServices s = new QuestionServices();
         try {
-            this.questions =  s.getQuestions(3);
+            this.questions =  s.getQuestions(3, null);
             loadQuestionToUI();
         } catch (SQLException ex) {
             Logger.getLogger(PrimaryController.class.getName()).log(Level.SEVERE, null, ex);
